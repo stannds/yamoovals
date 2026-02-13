@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { REPO_NAME } from "../../utils";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -7,7 +8,11 @@ export default function Home() {
   const [showButton, setShowButton] = useState(false);
   const [show, setShow] = useState(false);
   const [current, setCurrent] = useState(null);
-  const sad = ["/sad1.jpg", "/sad2.jpg", "/sad3.jpg"];
+  const sad = [
+    `${REPO_NAME}sad1.jpg`,
+    `${REPO_NAME}sad2.jpg`,
+    `${REPO_NAME}sad3.jpg`,
+  ];
 
   const openEnvelope = () => {
     setOpen(true);
@@ -40,7 +45,7 @@ export default function Home() {
       >
         {/* isi surat — hidden dulu */}
         <img
-          src="/isi.png"
+          src={`${REPO_NAME}isi.png`}
           className={`absolute inset-0 h-full w-full object-contain drop-shadow-2xl transition-all delay-200 duration-700 ${
             open
               ? "-translate-y-8 scale-105 opacity-100"
@@ -80,7 +85,7 @@ export default function Home() {
 
         {/* amplop */}
         <img
-          src="/amplop.png"
+          src={`${REPO_NAME}amplop.png`}
           className={`pointer-events-none absolute inset-0 h-full w-full object-contain drop-shadow-2xl transition-all duration-700 ${open ? "-translate-y-6 scale-90 opacity-0" : ""} `}
         />
       </div>

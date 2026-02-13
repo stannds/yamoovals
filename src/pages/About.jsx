@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { RiHomeHeartFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import { REPO_NAME } from "../../utils";
 
 export default function About() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export default function About() {
             </span>
             <div className="w-[min(90vw,620px)] overflow-hidden rounded-xl">
               <img
-                src="/card.png"
+                src={`${REPO_NAME}card.png`}
                 className="h-full w-full object-cover drop-shadow-2xl"
               />
             </div>
@@ -59,13 +60,13 @@ export default function About() {
             <div className="flex flex-row items-center justify-center gap-2">
               <div className="animate-wiggle">
                 <img
-                  src={"/red.png"}
+                  src={`${REPO_NAME}red.png`}
                   className="aspect-[3/4] w-[40vw] rounded-lg object-cover"
                 />
               </div>
               <div className="animate-wiggle">
                 <img
-                  src={"/white.png"}
+                  src={`${REPO_NAME}white.png`}
                   className="aspect-[3/4] w-[40vw] rounded-lg object-cover"
                 />
               </div>
@@ -100,7 +101,7 @@ export default function About() {
           className="mt-10 aspect-[16/9] w-[100px] cursor-pointer overflow-hidden rounded-xl"
         >
           <img
-            src="/arrow.png"
+            src={`${REPO_NAME}arrow.png`}
             className="h-full w-full object-cover drop-shadow-2xl"
           />
         </div>
